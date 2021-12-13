@@ -43,3 +43,8 @@ jobs:
         run: chmod +x ./gradlew
       - name: Build with Gradle
         run: ./gradlew build
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v2.1.0
+        with:
+          name: aabb
+          path: ./build/libs/mirai-test-1.1.0.mirai.jar
